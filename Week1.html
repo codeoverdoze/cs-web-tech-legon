@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 1</title>
+    <meta name="description" content="CSCD 311 Web Technologies" />
+    <meta name="author" content="Kingsley David Gyekye"/>
+    <link href="css/impress-common.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/classic-slides.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress"
+    data-transition-duration="1000"
+
+    data-width="1920"
+    data-height="1080"
+    data-max-scale="3"
+    data-min-scale="0"
+    data-perspective="1000">
+    <div class="step slide title" data-x="-2200" data-y="-3000">
+        <header>
+            <h1 style="font-size: 150%">WEEK 1 </h1><br>
+            <h2 style="font-size: 150%">Foundations of Web Applications</h2>
+        </header>
+    </div>
+    <div class="step slide" data-rel-x="2200" data-rel-y="0">
+        <h2 class="text-muted">In this session we will take a look at these topics</h2>
+        <ul class="list-group">
+            <li>Understanding How Web Applications Work</li>
+            <li>Understanding Rest APIs</li>
+            <li>Understanding Version Control Using Git</li>
+            <li>Understanding HTML5</li>
+            <li>Understanding CSS3</li>
+            <li>Understanding how web browsers work</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary text-center">What is a Web Application?</h1><br>
+        <ul class="list-group-flush">
+            <li class="list-group-item text-info">A Web Application is any piece of software that can be accessed from a web browser</li>
+            <li class="text-info list-group-item">Web Apps are classified as either static or dynamic</li>
+            <li class="text-info list-group-item">A Web Application can be colloquially referred to as a <strong>Web Server</strong> although the two are not exactly the same</li>
+            <li class="text-info list-group-item">Typically, web apps consist of two parts:
+            <ul>
+                <li>Server side</li>
+                <li>Client side</li>
+            </ul></li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">Server Side</h1>
+        <div style="font-size: 95%">
+            <ul class="list-group">
+                <li class="text-info">The Server-side of a web application generally refers to a computer(server) and the software or program that computer contains that hosts or runs a web application</li>
+                <li class="text-info">It is also sometimes known as the <em>Backend</em> of the application</li>
+                <li class="text-info">Most of the processing involved in the web application happen on the server</li>
+                <li class="text-info">Popular web servers include APACHE and NGINX</li>
+                <li class="text-info">The Backend receives requests from the client side through the browser, performs some operations on them and returns some results to the browser</li>
+                <li class="text-info">Communication between the client-side and server is via web protocols</li>
+                <li class="text-info">Examples of such protocols is HTTP, FTP and Web Socket</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">Client Side</h1>
+        <ul class="list-group">
+            <li class="text-info">The Client-side refers to the part of the application that the user or client interacts with</li>
+            <li class="text-info">It what the browser renders to the user</li>
+            <li class="text-info">The client-side is also sometimes known as the <em>frontend</em> of the application</li>
+            <li class="text-info">Requests are made on front the client-side of the application and sent to the server-side for processing</li>
+            <li class="text-info">Some processing and operations do however happen on the frontend</li>
+            <li class="text-info">The frontend is built using technologies like HTML, CSS and Javascript. These will be explored further in the course</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">Web Resources</h1>
+        <ul class="list-group">
+            <li class="text-info">These are identifiable documents that are hosted by a web server and can be accessed by the client</li>
+            <li class="text-info">Such resource documents can be in the form of a HTML, XML, pdf or json files among others</li>
+            <li class="text-info">A web resource is either static or dynamic</li>
+            <li class="text-info">A static web resource does not change and the web server passes into the client as it in stored on the server after it has been requested</li>
+            <li class="text-info">A dynamic web resource on the other hand is generated on the fly when the request for the resource is made</li>
+            <li class="text-info">Resources are uniquely identified by a Uniform Resource Locator(URL)</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">What is a Uniform Resource Locator?</h1>
+        <ul class="list-group">
+            <li class="text-info">Also referred to as a web address</li>
+            <li class="text-info">It is a is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it</li>
+            <li class="text-info">. A URL is a specific type of Uniform Resource Identifier (URI),[2][3] although many people use the two terms interchangeably</li>
+            <li class="text-info">A typical URL consists of a protocol, host name and a file name</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">URL contd</h1>
+        <div class="text-center" style="max-width: 100%">
+            <img src="slideImages/url-structure.jpg" style="max-width: 100%; max-height: 500px;">
+            <p class="figure-caption">Detailed Components of a URL</p>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">Client-Server Relationship</h1>
+        <div style="font-size: 95%">
+            <ul class="list-group">
+                <li class="text-info">As mentioned earlier, the client-side and server-side perform individual functions that come together to form the application architecture</li>
+                <li class="text-info">The Client(browser) makes request to the server via a web protocol, say HTTP</li>
+                <li class="text-info">This request contains details of what the client wants like the intended resource and the path to that resource</li>
+                <li class="text-info">The server receives this request, processes it and sends a response back over the HTTP to the client</li>
+                <li class="text-info">The Browser then takes this response and renders it to the user in a way the user can understand</li>
+                <li class="text-info">The server can respond with an error message if the requested resource is not available.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">Client-Server Relationship contd</h1><br><br>
+        <div class="text-center" style="max-width: 100%">
+            <img src="slideImages/webArchitecture.jpg" class="img-fluid" width="3000">
+            <p class="figure-caption">Web Application Architecture</p>
+        </div>
+    </div>
+    <div class="step slide" data-rotate="90">
+        <header>
+            <h1 class="my-auto">UNDERSTANDING REST API CONCEPTS</h1>
+        </header>
+    </div>
+    <div class="step slide">
+        <h1 class="text-center text-danger">API Concepts</h1>
+        <h2 class="text-muted">Introduction</h2>
+        <ul class="list-group-flush">
+            <li class="list-group-item fly-in fade-out">API stands for Application Programming Interface</li>
+            <li class="list-group-item fly-in fly-out">It is an intermediary between two software applications that allows them to talk to each other. </li>
+        </ul>
+        <ul class="list-group">
+            <li class="fly-in fly-out">For example, when using a weather app, the application utilises the API of a third party institution that collects weather data</li>
+            <li class="fly-in fly-out">Another example is a ride hailing app like Uber using Google Maps API to generate routes</li>
+        </ul>
+    </div>
+    <div class="step slide" data-rotate="90">
+        <h1 class="text-center text-danger">REST API</h1>
+        <ul class="list-group">
+            <li>It is an acronym for Representational State Transfer</li>
+            <li>In general, REST is a software architectural style which defines a set of rules and constraints that are used for creating web services, in this case APIs</li>
+            <li> RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations</li>
+            <li>An API call usually consists of the sever name, followed by the requested resource and then some parameters</li>
+        </ul>
+    </div>
+    <div class="step slide" data-rotate="90">
+        <h1 class="text-center text-danger">API Concepts</h1>
+        <h2 class="text-muted">Introduction</h2>
+        <p class="fly-in fade-out">API stands for Application Programming Interface</p>
+        <p class="fly-in fly-out">It is an intermediary between two software applications that allows them to talk to each other. </p>
+        <ul class="list-group fade-in">
+            <li>For example, when using a weather app, the application utilises the API of a third party institution that collects weather data</li>
+            <li>Another example is a ride hailing app like Uber using Google Maps API to generate routes</li>
+        </ul>
+    </div>
+    <div class="step slide" data-rotate-x="180">
+        <header class="my-auto">
+            <h1 class="title">Version Control Basics</h1><br>
+            <h3>Using GIT</h3>
+        </header>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary title">VERSION CONTROL</h1>
+        <ul class="list-group-flush" style="font-size: 95%">
+            <li class="list-group-item">A Control System is simply a tool that tracks and stores content</li>
+            <li class="list-group-item">Version Control System then is a system for keeping track of code and the changes that have been made to it</li>
+            <li class="list-group-item">Git is a distributed version control system that developers worldwide use to maintain a history of changes made to their code</li>
+            <li class="list-group-item">A distributed version control system is one where the code is stored on the developer's computer as well as on a remote server. It is stored on what is called a repository</li>
+            <li class="list-group-item">Basically a repository is is like a folder for your project. Your project's repository contains all of your project's files and stores each file's revision history</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary title">FEATURES OF GIT</h1>
+        <ul class="list-group" style="font-size: 85%">
+            <li class="fade-in fly-out"><strong>Distributed System:</strong>
+                Distributed systems are those which allow the users to perform work on a project from all over the world. Having a distributed system, Git allows the users to work simultaneously on the same project, without interfering with others’ work.
+                When a particular user gets done with their part of the code, they push the changes to the repository and these changes get updated in the local copy of every other remote user which pulls the latest copy of the project.</li>
+            <li class="fade-in fly-out"><strong>Compatibility:</strong>
+                Git is compatible with all the Operating Systems that are being used these days. Git repositories can also access the repositories of other Version Control Systems like SVN, CVK, etc.
+                Git can directly access the remote repositories created by these SVNs. </li>
+            <li class="fade-in fly-out"><strong>Non-linear Development:</strong>
+                Git allows users from all over the world to perform operations on a project remotely. A user can pick up any part of the project and do the required operation and then further update the project.
+                This can be done by the Non-linear development behavior of the Git.</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary title">FEATURES OF GIT <small>contd</small></h1>
+        <ul class="list-group" style="font-size: 80%">
+            <li class="fade-in fly-out"><strong>Branching:<strong></strong>
+                Git allows its users to work on a line that runs parallel to the main project files. These lines are called branches. Branches in Git provide a feature to make changes in the project without affecting the original version.
+                The master branch of a version will always contain the production quality code.
+                Any new feature can be tested and worked upon on the branches and further, it can be merged with the master branch.</li>
+            <li class="fade-in fly-out"><strong>Lightwieght:</strong>
+                Git stores all the data from the central repository on to the local repository while cloning is done. There might be hundreds of users working on the same project and hence the data in the central repository might be very huge.
+                Git follows the criteria of lossless compression that compresses the data and stores it in the local repository occupying very minimal space.
+                Whenever there is a need for this data, it follows the reverse technique and saves a lot of memory space.</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary title">ADVANTAGES OF GIT</h1>
+        <ul style="font-size: 90%">
+            <li class="fade-in fly-out"><strong>Performance:</strong> Git provides the best performance when it comes to version control systems.</li>
+            <li class="fade-in fly-out"><strong>Security:</strong> Git handles your security with cryptographic method SHA-1. The algorithm manages your versions, files, and directory securely so that your work is not corrupted.</li>
+            <li class="fade-in fly-out"><strong>Branching Model:</strong> Git branching model lets you have multiple local branches which are independent of each other.</li>
+            <li class="fade-in fly-out"><strong>Staging Area:</strong> Git has an intermediate stage called “index” or “staging area” where commits can be formatted and modified before completing the commit..</li>
+            <li class="fade-in fly-out"><strong>Open Source:</strong> Being open source invites the developers from all over the world to contribute to the software and make it more and more powerful through features and additional plugins.</li>
+        </ul></li>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary">USING GIT</h1>
+        <div style="font-size: 80%">
+            <p class="text-danger text-justify">Download Git</p>
+            <p class="text-justify">This link has details on how to install Git in multiple operating systems:</p>
+            <pre><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></pre>
+            <p>Verify if Git is installed by using the following command in the terminal:</p>
+            <pre class="git-commands"><code>git --version</code></pre>
+            <p class="text-danger text-justify">Create your local Git repository:</p>
+            In your computer, create a folder for your project. Let’s call the project folder git-demo.
+            Go into your project folder and add a local Git repository to the project using the following commands:
+            <pre class="git-commands"><code>cd git-demo</code><br><code>git init</code></pre>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary">USING GIT <small>contd</small></h1>
+        <div style="font-size: 70%">
+           <ul>
+               <li>Create a file named "demo.txt" <span class="text-muted" style="font-size: 90%">(For demo purposes hence it will not contain actual code)</span> and add the following text
+                   <pre class="git-commands">This is a random sentence</pre></li>
+               <li><strong>Basic Git Commands</strong>
+                <ul>
+                    <li><strong>Staging: </strong>This command is used to <em>stage</em> the file
+                        <pre class="git-commands"><code>git add demo.txt</code></pre></li>
+                    <li><strong>Committing: </strong>This command is used to <em>commit</em> the file
+                        <pre class="git-commands"><code>git commit -m "Initial commit</code></pre> The <code>-m</code> flag indicates a message that describes the changes that have been made to the file, in this case "Initial Commit".
+                    </li>
+                </ul>
+                </li>
+           </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary">Basic Git Commands <small>contd</small></h1>
+        <div style="font-size: 80%">
+            <ul>
+                <li><strong>Status: </strong>This command is used to find out information regarding what files are modified and what files are there in the staging area as well as other information
+                    <pre class="git-commands"><code>git status</code></pre></li>
+                <li><strong>Log: </strong>This command is used to print out all the commits which have been done up till now
+                    <pre class="git-commands"><code>git log</code></pre> The log shows the author of each commit, the date of the commit, and the commit message.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script type="text/javascript" src="js/mermaid.min.js"></script>
+<script type="text/javascript" src="js/markdown.js"></script>
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
