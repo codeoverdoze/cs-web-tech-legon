@@ -214,7 +214,7 @@
             <li class="fade-in fly-out"><strong>Branching Model:</strong> Git branching model lets you have multiple local branches which are independent of each other.</li>
             <li class="fade-in fly-out"><strong>Staging Area:</strong> Git has an intermediate stage called “index” or “staging area” where commits can be formatted and modified before completing the commit..</li>
             <li class="fade-in fly-out"><strong>Open Source:</strong> Being open source invites the developers from all over the world to contribute to the software and make it more and more powerful through features and additional plugins.</li>
-        </ul></li>
+        </ul>
     </div>
     <div class="step slide">
         <h1 class="text-primary">USING GIT</h1>
@@ -256,6 +256,34 @@
                     <pre class="git-commands"><code>git status</code></pre></li>
                 <li><strong>Log: </strong>This command is used to print out all the commits which have been done up till now
                     <pre class="git-commands"><code>git log</code></pre> The log shows the author of each commit, the date of the commit, and the commit message.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary">Basic Git Commands <small>contd</small></h1>
+        <h2 class="text-muted">Working WIth Branches</h2>
+        <div style="font-size: 80%">
+            <ul>
+                <li><strong>Create a New Branch in Local: </strong> Here you'll create a new branch called let's say 'demobranch'
+                    <pre class="git-commands"><code>git branch demoBranch </code></pre></li>
+                <li><strong>To switch from the master branch to 'demoBranch' use</strong>
+                    <pre class="git-commands"><code>git checkout demobranch</code></pre>
+                <li><strong>You can list out all the branches in local using the following command:</strong>
+                    <pre class="git-commands"><code>git branch</code></pre>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-primary">Basic Git Commands <small>contd</small></h1>
+        <h2 class="text-muted">Working WIth Branches(Merging)</h2>
+        <div style="font-size: 80%">
+            <ul>
+                <li><strong>First go back to master branch</strong>
+                    <pre class="git-commands"><code>git checkout master </code></pre></li>
+                <li>Then run the merge command
+                    <pre class="git-commands"><code>git merge demoBranch</code></pre>
+                <li>You can list out all the branches in local using the following command:
+                    <pre class="git-commands"><code>git branch</code></pre>
             </ul>
         </div>
     </div>
