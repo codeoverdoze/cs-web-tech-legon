@@ -112,11 +112,11 @@
         <div style="font-size: 95%">
             <ul class="list-group">
                 <li class="text-info">As mentioned earlier, the client-side and server-side perform individual functions that come together to form the application architecture</li>
-                <li class="text-info">The Client(browser) makes request to the server via a web protocol, say HTTP</li>
+                <li>The Client(browser) makes request to the server via a web protocol, say HTTP</li>
                 <li class="text-info">This request contains details of what the client wants like the intended resource and the path to that resource</li>
-                <li class="text-info">The server receives this request, processes it and sends a response back over the HTTP to the client</li>
+                <li>The server receives this request, processes it and sends a response back over the HTTP to the client</li>
                 <li class="text-info">The Browser then takes this response and renders it to the user in a way the user can understand</li>
-                <li class="text-info">The server can respond with an error message if the requested resource is not available.</li>
+                <li >The server can respond with an error message if the requested resource is not available.</li>
             </ul>
         </div>
     </div>
@@ -153,16 +153,6 @@
             <li>An API call usually consists of the sever name, followed by the requested resource and then some parameters</li>
         </ul>
     </div>
-    <div class="step slide" data-rotate="90">
-        <h1 class="text-center text-danger">API Concepts</h1>
-        <h2 class="text-muted">Introduction</h2>
-        <p class="fly-in fade-out">API stands for Application Programming Interface</p>
-        <p class="fly-in fly-out">It is an intermediary between two software applications that allows them to talk to each other. </p>
-        <ul class="list-group fade-in">
-            <li>For example, when using a weather app, the application utilises the API of a third party institution that collects weather data</li>
-            <li>Another example is a ride hailing app like Uber using Google Maps API to generate routes</li>
-        </ul>
-    </div>
     <div class="step slide" data-rotate-x="180">
         <header class="my-auto">
             <h1 class="title">Version Control Basics</h1><br>
@@ -196,7 +186,7 @@
     <div class="step slide">
         <h1 class="text-primary title">FEATURES OF GIT <small>contd</small></h1>
         <ul class="list-group" style="font-size: 80%">
-            <li class="fade-in fly-out"><strong>Branching:<strong></strong>
+            <li class="fade-in fly-out"><strong>Branching:</strong>
                 Git allows its users to work on a line that runs parallel to the main project files. These lines are called branches. Branches in Git provide a feature to make changes in the project without affecting the original version.
                 The master branch of a version will always contain the production quality code.
                 Any new feature can be tested and worked upon on the branches and further, it can be merged with the master branch.</li>
@@ -287,9 +277,204 @@
             </ul>
         </div>
     </div>
+    <div class="step slide">
+        <h2 class="text-primary">Git vs Github</h2>
+        <ul class="list-group-flush">
+            <li class="list-group-item">Github is basically a git repository hosting service</li>
+            <li class="list-group-item"> It is an online database that allows you to keep track of and share your Git version control projects outside of your local computer/server.</li>
+            <li class="list-group-item">To differentiate between <em>Git</em> and <em>Github</em> in simple terms, Git is a version control system that lets you manage and keep track of your source code history whereas GitHub is a cloud-based hosting service that lets you manage Git repositories.
+        </ul>
+    </div>
+    <div class="step slide" data-rotate-y="180" data-rel-y="1500">
+        <header class="my-auto">
+            <h1 class="title">Understanding How Web Browsers Work</h1><br>
+        </header>
+    </div>
+    <div class="step slide">
+        <h1 class="text-danger title">WHAT IS A WEB BROWSER?</h1>
+        <div class="text-info">
+            <ul class="list-group-flush" style="font-size: 95%">
+                <li class="list-group-item">A browser is a software application used to locate, retrieve and display content on the World Wide Web, including Web pages, images, video and other files.</li>
+                <li class="list-group-item">In a Client/Server Relationship, the browser is the client running on a computer that makes requests to the web server and displays results for the user.</li>
+                <li class="list-group-item">Modern day browsers are fully functional sutites that can interpret and display various forms of web resources like  HTML Web pages, applications, JavaScript, AJAX and other content hosted on Web servers.</li>
+                <li class="list-group-item">Many browsers offer plug-ins which extend the capabilities of the software</li>
+                <li class="list-group-item">Examples of browsers are Google Chrome, Mozilla Firefox, Safari, Opera, Internet Explorer etc.</li>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-danger title">ARCHITECTURE OF BROWSERS</h1>
+        <h3 class="text-muted text-justify">High Level Architecture</h3><br>
+        <div class="text-center" style="max-width: 100%">
+            <img src="slideImages/high-level-browser.png" class="img-fluid">
+            <p class="figure-caption">High Level Browser Architecture</p>
+        </div>
+    </div>
+    <div class="step slide">
+        <h2 class="text-danger">High Level Architecture<small>contd</small></h2>
+        <div style="font-size: 90%">
+            <ul class="list-group text-info">
+                <li><strong>The User Interface:</strong> The user interface is the space where User interacts with the browser.
+                    It includes the address bar, back and next buttons, home button, refresh and stop, bookmark option, etc.</li>
+                <li ><strong>The Browser Engine:</strong> The browser engine works as a bridge between the User interface and the rendering engine.
+                    According to the inputs from various user interfaces, it queries and manipulates the rendering engine.</li>
+                <li><strong>The Rendering Engine:</strong> The rendering engine, as the name suggests is responsible for rendering the requested web page on the browser screen.
+                    The rendering engine interprets the HTML, XML documents and images that are formatted using CSS and generates the layout that is displayed in the User Interface.</li>
+                <li><strong>Networking:</strong> Component of the browser which retrieves the URLs using the common internet protocols of HTTP or FTP. The networking component handles all aspects of Internet communication and security.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h2 class="text-danger">High Level Architecture<small>contd</small></h2>
+        <div style="font-size: 95%">
+            <ul class="list-group text-info">
+                <li><strong>JavaScript Interpreter:</strong> It is the component of the browser which interprets and executes the javascript code embedded in a website.
+                    The interpreted results are sent to the rendering engine for display. </li>
+                <li ><strong>UI Backend:</strong> UI backend is used for drawing basic widgets like combo boxes and windows. This backend exposes a generic interface that is not platform specific.
+                    It underneath uses operating system user interface methods.</li>
+                <li><strong>Data Persistence/Storage:</strong> This is a persistence layer. Browsers support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem. It is a small database created on the local drive of the computer where the browser is installed.
+                    It manages user data such as cache, cookies, bookmarks and preferences.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h2 class="text-danger">Rendering Engine</h2>
+        <div>
+            <ul class="list-group text-info">
+                <li>The networking layer will start sending the contents of the requested documents to the rendering engine in chunks of 8KBs.</li>
+                <li >The rendering engine parses the chunks of HTML document and convert the elements to DOM nodes in a tree called the “content tree” or the “DOM tree”.</li>
+                <li>It also parses both the external CSS files as well in style elements.</li>
+                <li>While the DOM tree is being constructed, the browser constructs another tree, the render tree. It is the visual representation of the document.</li>
+                <li>The purpose of this tree is to enable painting the contents in their correct order.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h2 class="text-danger">Rendering Engine <small>contd</small></h2>
+        <div>
+            <ul class="list-group text-info">
+                <li>After the construction of the render tree, it goes through a “layout process” of the render tree.</li>
+                <li >When the renderer is created and added to the tree, it does not have a position and size. The process of calculating these values is called layout or reflow. </li>
+                <li>All renderers have a “layout” or “reflow” method, each renderer invokes the layout method of its children that need layout.</li>
+                <li>The next stage is painting.</li>
+                <li>In the painting stage, the render tree is traversed and the renderer’s “paint()” method is called to display content on the screen. Painting uses the UI backend layer.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h2 class="text-danger">Rendering Engine <small>contd</small></h2>
+        <div>
+            <ul class="list-group text-info">
+                <li>The rendering engine always tries to display the contents on the screen as soon as possible for better user experience.</li>
+                <li>It does not wait for the HTML parsing to complete before starting to build and layout the render tree.</li>
+                <li>It parses and displays the content it has received from the network, while rest of the contents stills keeps coming from the network.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step slide" data-rel-x="2500" data-rel-y="-1500" data-rotate-x="90" data-rotate="180">
+        <div style="font-size: 200%; margin: 10%">
+            <h1>HTML <br>& <br>CSS</h1>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success" style="font-size: 150%">HTML</h1>
+        <div>
+            <ul class="list-group-flush">
+                <li class="list-group-item">HTML stands for HyperText Markup Language</li>
+                <li class="list-group-item">It is a format that tells a computer how to display a web page.</li>
+                <li class="list-group-item">The documents themselves are plain text files with special "tags" or codes that a web browser uses to interpret and display information on your computer screen.</li>
+                <li class="list-group-item">An HTML file must have a <em>.htm</em> or <em>.html</em> extension</li>
 
+            </ul>
+        </div>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success" style="font-size: 150%">Structure of an HTML Document</h1>
+        <div>
+            <pre class="git-commands"><code>
+            &lt;!Doctype html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;
+                .
+            &lt;/head&gt;
+            &lt;body&gt;
+                .
+                .
+                .
+                .
+                .
+            &lt;/body&gt;
+            &lt;/html&gt;
+            </code></pre>
+            <p class="figure-caption">Basic Structure of An HTML Document</p>
+        </div>
 
-
+    </div>
+    <div class="step slide">
+        <h1 class="text-success">Structure of an HTML Document <small>contd</small></h1>
+        <p class="text-justify text-muted" style="font-size: 80%">The previous slide shows a skeleton html document. This is the minimum required information for a web document and all web documents should contain these basic components.</p>
+        <ul class="list-group">
+            <li><code>&lt;!doctype html&gt;</code>: This tells the browser what kind of document to expect</li>
+            <li><code>&lt;html&gt;</code>: This indicates the start of the html document.The last tag in your document is <code>&lt;/html&gt;</code> which tells the browser that this is the end of the html document.</li>
+            <li><code>&lt;header&gt;&lt;/header&gt;</code>: The text between these tags is header information. Header information is not displayed in the browser window.
+                <ul><li><code>&lt;title&gt;&lt;/title&gt;</code>: The text written within these tags is the title of the webpage that is displayed inside the browser tab</li></ul>
+            </li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success">Structure of an HTML Document <small>contd</small></h1>
+        <ul class="list-group">
+            <li><code>&lt;body&gt;&lt;/body&gt;</code>: This contains the text, images, audio and other forms of media that will be displayed within the browser window. There are several tags that can be used here to achieve different purposes.
+                Some examples are below;
+                <ul>
+                    <li><code>&lt;h1&gt;&lt;/h1&gt;</code>: This is used to indicate the most important or highest level text on a page</li>
+                    <li><code>&lt;p&gt;&lt;/p&gt;</code>: This represents a paragraph</li>
+                    <li><code>&lt;div&gt;&lt;/div&gt;</code>: This defines a division or  section of the page</li>
+                    <li><code>&lt;img&gt;&lt;/img&gt;</code>: This is used to embed an image on the page/li>
+                    <li><code>&lt;br&gt;</code>: This defines a line break. It used to move content to the next line</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success">HTML Tag vs HTML Element</h1>
+        <ul class="list-group-flush">
+            <li class="list-group-item">HTML tags are surrounded by the two characters < and ></li>
+            <li class="list-group-item">The tags normally come in pairs like &lt;b> and &lt;/b></li>
+            <li class="list-group-item">The first tag in a pair is the start tag, the second tag is the end tag</li>
+            <li class="list-group-item">An HTML element however is a tag that has some content in it</li>
+            <li class="list-group-item">The content can be text or some other tags</li>
+            <li class="list-group-item">Below is an example of an html element <pre class="git-commands"><code>&lt;p>This is an element&lt;/p></code></pre></li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success" style="font-size: 120%">CSS</h1>
+        <ul class="list-group-flush" style="font-size: 80%;">
+            <li class="list-group-item">CSS stands for Cascading Stylesheets</li>
+            <li class="list-group-item">CSS allows you to create rules that specify how the content of an element should appear.</li>
+            <li class="list-group-item">CSS works by associating rules with HTML elements.</li>
+            <li class="list-group-item">A CSS rule contains two parts: a <em>selector</em> and a <em>declaration</em>.</li>
+            <li class="list-group-item">For example:
+            <pre class="git-commands">
+                <code>p{ font-family: Arial; }
+            </code></pre>
+            </li>
+            <li class="list-group-item"><code>p</code> is the selector and <code>font-family: Arial</code> is a declaration</li>
+        </ul>
+    </div>
+    <div class="step slide">
+        <h1 class="text-success" style="font-size: 120%">CSS <small>contd</small></h1>
+        <ul class="list-group">
+            <li>The CSS rule in the previous slide indicates that all &lt;p> elements should be shown in the arial typeface</li>
+            <li><strong>Selectors: </strong>indicate which element the rule applies to. The same rule can apply to more than one element if you separate the element names with commas.</li>
+            <li><strong>Declaration: </strong>indicate how the elements referred to in the selector should be styled. Declarations are split into two parts (a <em>property</em> and a <em>value</em>), and are separated by a colon.</li>
+            <li>CSS rules can be <ol style="font-size: 90% ">
+                <li>Written in the opening tag of an html element</li>
+                <li>Written in the &lt;head> tag</li>
+                <li>Written in a different file and the file then linked to the hmtl document</li>
+            </ol></li>
+        </ul>
+    </div>
 </div>
 <div id="impress-toolbar"></div>
 
